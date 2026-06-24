@@ -1,16 +1,48 @@
-# React + Vite
+# Trimoyee Ghosh — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An OS-themed developer portfolio built with React and Vite. The desktop simulates a windowed environment — double-click icons to open sections, drag windows around, minimize, maximize, and close them. Supports both a macOS and a Windows UI skin, with a toggle to switch between them.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Windowed UI** — fully draggable, resizable, minimizable windows for each section
+- **Dual OS theme** — macOS dock + wallpaper or Windows taskbar + wallpaper; switchable at runtime via a button
+- **Mobile layout** — dedicated responsive view for small screens
+- **Interactive terminal** — `tri@portfolio` bash-style terminal with real commands
+- **Right-click context menu** — open all / close all windows from the desktop
+- **Sections**: About · Experience · Projects · Skills · Achievements · Education · Terminal · Contact
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18** + **Vite**
+- **JavaScript**
+- **Framer Motion** — window animations and transitions
+- CSS-in-JS inline styles with a dark theme (`#0a0a14` base, purple/blue accents)
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173).
+
+```bash
+npm run build   # production build → dist/
+npm run preview # preview the production build locally
+```
+
+## Project structure
+
+```
+src/
+  components/     # UI components (windows, taskbar, wallpaper, icons…)
+  data/
+    portfolio.js  # all content: profile, experience, projects, skills, etc.
+  hooks/          # useWindowManager, useIsMobile, useOS
+  App.jsx         # root — window manager wiring + OS switching
+public/
+  favicon.svg     
+```
+
+All portfolio content lives in [src/data/portfolio.js](src/data/portfolio.js)
