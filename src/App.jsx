@@ -31,7 +31,7 @@ const WIN_CONFIG = {
 
 const ALL_IDS = Object.keys(WIN_CONFIG);
 
-function MobileBanner({ onDismiss }) {
+function DesktopBanner({ onDismiss }) {
   return (
     <div style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 99999,
@@ -46,7 +46,7 @@ function MobileBanner({ onDismiss }) {
       boxShadow: "0 2px 16px rgba(0,0,0,0.4)",
     }}>
       <span>
-        📱 Viewing on mobile? Turn off <strong>Desktop Site</strong> in your browser for the best experience.
+        📱 On mobile? Turn off <strong>Desktop Site</strong> in your browser for the best experience.
       </span>
       <button
         onClick={onDismiss}
@@ -64,14 +64,9 @@ function MobileBanner({ onDismiss }) {
   );
 }
 
-function useActualMobileDevice() {
-  return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
-}
-
 export default function App() {
   const isMobile = useIsMobile();
-  const isActualMobile = useActualMobileDevice();
-  const [desktopSiteBanner, setDesktopSiteBanner] = useState(true);
+  const [banner, setBanner] = useState(true);
   const wm = useWindowManager();
   const [ctxMenu, setCtxMenu] = useState(null);
   const [os, setOs] = useState(() => detectOS());
@@ -86,14 +81,7 @@ export default function App() {
     setOs(next);
   };
 
-  if (isMobile) return (
-    <>
-      {desktopSiteBanner && (
-        <MobileBanner onDismiss={() => setDesktopSiteBanner(false)} />
-      )}
-      <MobileApp />
-    </>
-  );
+  if (isMobile) return <MobileApp />;
 
   const handleContextMenu = useCallback((e) => {
     e.preventDefault();
@@ -172,10 +160,8 @@ export default function App() {
         />
       )}
 
-      {/* Mobile "Desktop Site" warning */}
-      {isActualMobile && !isMobile && desktopSiteBanner && (
-        <MobileBanner onDismiss={() => setDesktopSiteBanner(false)} />
-      )}
+      {/* Desktop Site warning — always visible on desktop layout */}
+      {banner && <DesktopBanner onDismiss={() => setBanner(false)} />}
 
       {/* Boot hint */}
       <div style={{
