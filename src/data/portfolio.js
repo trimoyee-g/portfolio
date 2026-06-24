@@ -7,6 +7,7 @@ export const desktopItems = [
   { id: "education",    icon: "🎓", label: "Education" },
   { id: "terminal",     icon: "🖥️", label: "Terminal" },
   { id: "contact",      icon: "📬", label: "Contact" },
+  { id: "resume",       icon: "📄", label: "Resume" },
 ];
 
 export const profile = {

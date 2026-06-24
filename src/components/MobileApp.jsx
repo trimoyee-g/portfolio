@@ -124,17 +124,40 @@ function AboutSection() {
         </Card>
       </SlideItem>
 
-      <SlideItem index={1}>
-        <Card>
-          <SectionLabel>Get in Touch</SectionLabel>
-          <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
-            <ContactRow icon="📧" text={profile.email}    href={`mailto:${profile.email}`} />
-            <ContactRow icon="📞" text={profile.phone}    href={`tel:${profile.phone}`} />
-            <ContactRow logo={linkedinLogo} text={profile.linkedin} href={`https://${profile.linkedin}`} />
-            <ContactRow logo="https://cdn.simpleicons.org/github/ffffff"   text={profile.github}   href={`https://${profile.github}`} />
-            <ContactRow icon="📍" text={profile.location} />
+      <SlideItem index={2}>
+        <div style={{
+          background: "rgba(99,102,241,0.08)",
+          border: "1px solid rgba(99,102,241,0.25)",
+          borderRadius: 12, padding: "14px 16px",
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+            <span style={{ fontSize: 18 }}>📄</span>
+            <div>
+              <div style={{ color: "#f0f6fc", fontWeight: 700, fontSize: 13 }}>Resume</div>
+              {/* <div style={{ color: "#8b949e", fontSize: 11, marginTop: 1 }}>Trimoyee Ghosh · PDF</div> */}
+            </div>
           </div>
-        </Card>
+          <div style={{ display: "flex", gap: 8 }}>
+            <a href="/Trimoyee_Ghosh_Resume.pdf" target="_blank" rel="noreferrer" style={{
+              flex: 1, textAlign: "center",
+              background: "rgba(99,102,241,0.18)", color: "#818cf8",
+              border: "1px solid rgba(99,102,241,0.4)",
+              borderRadius: 8, padding: "9px 0",
+              fontSize: 12.5, textDecoration: "none", fontWeight: 600,
+            }}>
+              👁 View
+            </a>
+            <a href="/Trimoyee_Ghosh_Resume.pdf" download="Trimoyee_Ghosh_Resume.pdf" style={{
+              flex: 1, textAlign: "center",
+              background: "rgba(99,102,241,0.18)", color: "#818cf8",
+              border: "1px solid rgba(99,102,241,0.4)",
+              borderRadius: 8, padding: "9px 0",
+              fontSize: 12.5, textDecoration: "none", fontWeight: 600,
+            }}>
+              ⬇ Download
+            </a>
+          </div>
+        </div>
       </SlideItem>
     </div>
   );
@@ -419,16 +442,18 @@ function MoreSection() {
         ))}
       </div>
 
-      {/* Contact
-      <SectionLabel>Get In Touch</SectionLabel>
-      <Card>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <ContactRow icon="📧" text={profile.email}    href={`mailto:${profile.email}`} />
-          <ContactRow icon="📞" text={profile.phone}    href={`tel:${profile.phone}`} />
-          <ContactRow icon="💼" text={profile.linkedin} href={`https://${profile.linkedin}`} />
-          <ContactRow icon="🐙" text={profile.github}   href={`https://${profile.github}`} />
-        </div>
-      </Card> */}
+      <SlideItem index={1}>
+        <Card>
+          <SectionLabel>Get in Touch</SectionLabel>
+          <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
+            <ContactRow icon="📧" text={profile.email}    href={`mailto:${profile.email}`} />
+            <ContactRow icon="📞" text={profile.phone}    href={`tel:${profile.phone}`} />
+            <ContactRow logo={linkedinLogo} text={profile.linkedin} href={`https://${profile.linkedin}`} />
+            <ContactRow logo="https://cdn.simpleicons.org/github/ffffff"   text={profile.github}   href={`https://${profile.github}`} />
+            <ContactRow icon="📍" text={profile.location} />
+          </div>
+        </Card>
+      </SlideItem>
     </div>
   );
 }

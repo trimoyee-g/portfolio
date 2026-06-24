@@ -17,6 +17,7 @@ import ProjectsWindow from "./components/ProjectsWindow";
 import SkillsWindow from "./components/SkillsWindow";
 import TerminalWindow from "./components/TerminalWindow";
 import { AchievementsWindow, EducationWindow, ContactWindow } from "./components/OtherWindows";
+import ResumeWindow from "./components/ResumeWindow";
 
 const WIN_CONFIG = {
   about:        { title: "About Me",      icon: "👤", width: 580, height: 520, component: AboutWindow },
@@ -27,6 +28,7 @@ const WIN_CONFIG = {
   education:    { title: "Education",     icon: "🎓", width: 500, height: 400, component: EducationWindow },
   terminal:     { title: "tri@portfolio — bash", icon: "🖥️", width: 580, height: 380, component: TerminalWindow },
   contact:      { title: "Contact",       icon: "📬", width: 500, height: 450, component: ContactWindow },
+  resume:       { title: "Resume",        icon: "📄", width: 680, height: 600, component: ResumeWindow },
 };
 
 const ALL_IDS = Object.keys(WIN_CONFIG);
