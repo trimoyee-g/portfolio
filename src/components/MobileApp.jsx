@@ -138,7 +138,7 @@ function AboutSection() {
             </div>
           </div>
           <div style={{ display: "flex", gap: 8 }}>
-            <a href="/Trimoyee_Ghosh_Resume.pdf" target="_blank" rel="noreferrer" style={{
+            <a href="https://drive.google.com/file/d/10z_vJjTWfUlOt9EoxAYrQWnRFcfhsFIQ/preview" target="_blank" rel="noreferrer" style={{
               flex: 1, textAlign: "center",
               background: "rgba(99,102,241,0.18)", color: "#818cf8",
               border: "1px solid rgba(99,102,241,0.4)",
