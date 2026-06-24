@@ -31,6 +31,39 @@ const WIN_CONFIG = {
 
 const ALL_IDS = Object.keys(WIN_CONFIG);
 
+function MobileBanner({ onDismiss }) {
+  return (
+    <div style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 99999,
+      background: "rgba(99,102,241,0.92)",
+      backdropFilter: "blur(12px)",
+      WebkitBackdropFilter: "blur(12px)",
+      padding: "10px 16px",
+      display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12,
+      fontFamily: "system-ui, -apple-system, sans-serif",
+      fontSize: 12.5,
+      color: "#fff",
+      boxShadow: "0 2px 16px rgba(0,0,0,0.4)",
+    }}>
+      <span>
+        📱 Viewing on mobile? Turn off <strong>Desktop Site</strong> in your browser for the best experience.
+      </span>
+      <button
+        onClick={onDismiss}
+        style={{
+          background: "rgba(255,255,255,0.18)", border: "none",
+          borderRadius: 6, padding: "4px 10px",
+          color: "#fff", fontSize: 11.5, fontWeight: 600,
+          cursor: "pointer", flexShrink: 0,
+          fontFamily: "system-ui, sans-serif",
+        }}
+      >
+        Dismiss
+      </button>
+    </div>
+  );
+}
+
 function useActualMobileDevice() {
   return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
 }
@@ -53,7 +86,14 @@ export default function App() {
     setOs(next);
   };
 
-  if (isMobile) return <MobileApp />;
+  if (isMobile) return (
+    <>
+      {desktopSiteBanner && (
+        <MobileBanner onDismiss={() => setDesktopSiteBanner(false)} />
+      )}
+      <MobileApp />
+    </>
+  );
 
   const handleContextMenu = useCallback((e) => {
     e.preventDefault();
@@ -134,34 +174,7 @@ export default function App() {
 
       {/* Mobile "Desktop Site" warning */}
       {isActualMobile && !isMobile && desktopSiteBanner && (
-        <div style={{
-          position: "fixed", top: 0, left: 0, right: 0, zIndex: 99999,
-          background: "rgba(99,102,241,0.92)",
-          backdropFilter: "blur(12px)",
-          WebkitBackdropFilter: "blur(12px)",
-          padding: "10px 16px",
-          display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12,
-          fontFamily: "system-ui, -apple-system, sans-serif",
-          fontSize: 12.5,
-          color: "#fff",
-          boxShadow: "0 2px 16px rgba(0,0,0,0.4)",
-        }}>
-          <span>
-            📱 On mobile? Turn off <strong>Desktop Site</strong> in your browser for the best experience.
-          </span>
-          <button
-            onClick={() => setDesktopSiteBanner(false)}
-            style={{
-              background: "rgba(255,255,255,0.18)", border: "none",
-              borderRadius: 6, padding: "4px 10px",
-              color: "#fff", fontSize: 11.5, fontWeight: 600,
-              cursor: "pointer", flexShrink: 0,
-              fontFamily: "system-ui, sans-serif",
-            }}
-          >
-            Dismiss
-          </button>
-        </div>
+        <MobileBanner onDismiss={() => setDesktopSiteBanner(false)} />
       )}
 
       {/* Boot hint */}
