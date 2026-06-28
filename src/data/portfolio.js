@@ -20,7 +20,7 @@ export const profile = {
   location: "India",
   status: "Seeking SDE-1 opportunities · Immediate Joiner",
   summary: [
-    "I'm a recent B.E. graduate from Jadavpur University (May 2026), currently interning as a Software Engineer at Louisa AI in Bengaluru, where I'm building browser extensions that bring AI directly into news platforms.",
+    "I'm a 2026 B.E. graduate from Jadavpur University, Kolkata, currently interning as a Software Engineer at Louisa AI in Bengaluru, where I'm building browser extensions that bring AI directly into news platforms.",
     "I prefer working on backend systems. What got me into it was realizing how much happens behind a simple user action. Something as basic as clicking a button can trigger multiple services, events, and database operations. Understanding how all those pieces fit together and building reliable systems around them is what I enjoy most.",
     "I also work with Scale AI evaluating pre-release language and multimodal models via RLHF, and previously interned at PwC India on ETL pipelines and data migration.",
   ],
@@ -177,7 +177,7 @@ export const education = [
   {
     institution: "Jadavpur University",
     degree: "B.E. in Mechanical Engineering",
-    period: "Nov 2022 – May 2026",
+    period: "Nov 2022 – June 2026",
     location: "Kolkata, West Bengal, India",
     icon: "🎓",
   },
