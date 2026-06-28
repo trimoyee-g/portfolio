@@ -1,13 +1,13 @@
 import { achievements, education, profile } from "../data/portfolio";
 import linkedinLogo from "../assets/linkedinLogo.png";
 import flipkartLogo from "../assets/flipkartLogo.png";
-import leetCodeLogo from "../assets/leetCodeLogo.png";
+import leetcodeLogo from "../assets/leetcodeLogo.png";
 import codechefLogo from "../assets/codechefLogo.png";
 import { SectionHeader } from "./SectionHeader";
 
 const ACHIEVEMENT_LOGOS = {
   "Flipkart Grid 7.0": flipkartLogo,
-  "LeetCode Knight (top 3.24% globally)":          leetCodeLogo,
+  "LeetCode Knight (top 3.24% globally)":          leetcodeLogo,
   "CodeChef":          codechefLogo,
 };
 
