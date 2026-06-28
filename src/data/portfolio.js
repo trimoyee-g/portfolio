@@ -160,15 +160,15 @@ export const achievements = [
   {
     icon: "💻",
     logo: "https://cdn.simpleicons.org/leetcode/FFA116",
-    title: "LeetCode",
-    desc: "1200+ problems solved · Highest rating: 1834",
+    title: "LeetCode Knight (top 3.24% globally)",
+    desc: "1200+ problems solved · Highest rating: 1957",
     skills: ["Competitive Programming", "Data Structures and Algorithms"],
   },
   {
     icon: "⭐",
     logo: "https://cdn.simpleicons.org/codechef/B92B27",
     title: "CodeChef",
-    desc: "3★ rated · Highest rating: 1627",
+    desc: "3★ rated · Highest rating: 1717",
     skills: ["Competitive Programming", "Data Structures and Algorithms"],
   },
 ];

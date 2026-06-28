@@ -62,10 +62,8 @@ Location: ${profile.location}`,
   ██          ██   Kernel  : React 18
   ██  ██████  ██   Shell   : bash
   ██          ██   RAM     : ∞ motivation
-  ██████████████   
-                   Role    : Backend Engineer
-                   Rating  : LeetCode 1834
-                   Streak  : Building 🔥`,
+  ██████████████   Streak  : Building 🔥`
+                   
 };
 
 export default function TerminalWindow() {

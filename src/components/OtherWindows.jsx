@@ -1,12 +1,14 @@
 import { achievements, education, profile } from "../data/portfolio";
 import linkedinLogo from "../assets/linkedinLogo.png";
 import flipkartLogo from "../assets/flipkartLogo.png";
+import leetCodeLogo from "../assets/leetCodeLogo.png";
+import codechefLogo from "../assets/codechefLogo.png";
 import { SectionHeader } from "./SectionHeader";
 
 const ACHIEVEMENT_LOGOS = {
   "Flipkart Grid 7.0": flipkartLogo,
-  "LeetCode":          "https://cdn.simpleicons.org/leetcode/FFA116",
-  "CodeChef":          "https://cdn.simpleicons.org/codechef/B92B27",
+  "LeetCode Knight (top 3.24% globally)":          leetCodeLogo,
+  "CodeChef":          codechefLogo,
 };
 
 export function AchievementsWindow() {
