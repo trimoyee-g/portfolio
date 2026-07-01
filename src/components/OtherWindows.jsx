@@ -7,7 +7,7 @@ import { SectionHeader } from "./SectionHeader";
 
 const ACHIEVEMENT_LOGOS = {
   "Flipkart Grid 7.0": flipkartLogo,
-  "LeetCode Knight (top 3.24% globally)":          leetcodeLogo,
+  "LeetCode Knight (top 2.34% globally)":          leetcodeLogo,
   "CodeChef":          codechefLogo,
 };
 

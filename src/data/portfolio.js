@@ -160,8 +160,8 @@ export const achievements = [
   {
     icon: "💻",
     logo: "https://cdn.simpleicons.org/leetcode/FFA116",
-    title: "LeetCode Knight (top 3.24% globally)",
-    desc: "1200+ problems solved · Highest rating: 1957",
+    title: "LeetCode Knight (top 2.34% globally)",
+    desc: "1200+ problems solved · Highest rating: 2018",
     skills: ["Competitive Programming", "Data Structures and Algorithms"],
   },
   {
